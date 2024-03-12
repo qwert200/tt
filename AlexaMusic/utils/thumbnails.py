@@ -156,13 +156,9 @@ async def gen_thumb(videoid, user_id, theme):
     play_icons = play_icons.resize((580, 62))
     background.paste(play_icons, (text_x_position, 450), play_icons)
 
-        try:
-            os.remove(f"cache/thumb{videoid}.png")
-        except:
-            pass
-        file = f"cache/que{videoid}_{chat_id}.png"
-        background.save(f"cache/que{videoid}_{chat_id}.png")
-        return f"cache/que{videoid}_{chat_id}.png"
-    except Exception as e:
-        print(e)
-        return YOUTUBE_IMG_URL
+    try:
+        os.remove(f"cache/thumb{videoid}.png")
+    except:
+        pass
+    background.save(f"cache/que{videoid}_{chat_id}.png")
+    return f"cache/que{videoid}_{chat_id}.png"
