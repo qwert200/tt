@@ -139,67 +139,7 @@ async def gen_thumb(videoid, user_id, theme):
         ImageFont.truetype("assets/font.ttf", 25)
         para = textwrap.wrap(title, width=32)
         try:
-            text_w, text_h = draw.textsize(f"ALEXA MUSIC IS PLAYING OP", font=font)
-            draw.text(
-                ((1280 - text_w) / 2, 30),
-                f"ALEXA MUSIC IS PLAYING OP",
-                fill="red",
-                font=font,
-            )
-            text_w, text_h = draw.textsize(
-                f"Alexa Music One Of The Most Advanced Telegram Music Bot", font=arial
-            )
-            draw.text(
-                ((1280 - text_w) / 2, 80),
-                f"Alexa Music One Of The Most Advanced Telegram Music Bot",
-                fill="green",
-                font=arial,
-            )
-            if para[0]:
-                text_w, text_h = draw.textsize(f"{para[0]}", font=font)
-                draw.text(
-                    ((1280 - text_w) / 2, 550),
-                    f"{para[0]}",
-                    fill="yellow",
-                    stroke_width=1,
-                    stroke_fill="black",
-                    font=font,
-                )
-            if para[1]:
-                text_w, text_h = draw.textsize(f"{para[1]}", font=font)
-                draw.text(
-                    ((1280 - text_w) / 2, 600),
-                    f"{para[1]}",
-                    fill="white",
-                    stroke_width=1,
-                    stroke_fill="black",
-                    font=font,
-                )
-        except:
-            pass
-        text_w, text_h = draw.textsize(f"YouTube: Jankari Ki Duniya", font=arial)
-        draw.text(
-            ((1280 - text_w) / 2, 620),
-            f"YouTube: Jankari Ki Duniya",
-            fill="white",
-            font=arial,
-        )
-        text_w, text_h = draw.textsize(f"Duration: {duration} Mins", font=arial)
-        draw.text(
-            ((1280 - text_w) / 2, 660),
-            f"Duration: {duration} Mins",
-            fill="black",
-            font=arial,
-        )
-        try:
-            os.remove(f"cache/thumb{videoid}.png")
-        except:
-            pass
-        background.save(f"cache/{videoid}_{user_id}.png")
-        return f"cache/{videoid}_{user_id}.png"
-    except Exception as e:
-        print(e)
-        return YOUTUBE_IMG_URL
+            
 
 
 async def gen_qthumb(videoid, user_id, theme):
@@ -297,60 +237,6 @@ async def gen_qthumb(videoid, user_id, theme):
         arial = ImageFont.truetype("assets/font2.ttf", 25)
         ImageFont.truetype("assets/font.ttf", 25)
         para = textwrap.wrap(title, width=32)
-        try:
-            text_w, text_h = draw.textsize(f"ALEXA ADDED THIS SONG TO QUEUE", font=font)
-            draw.text(
-                ((1280 - text_w) / 2, 30),
-                f"ALEXA ADDED THIS SONG TO QUEUE",
-                fill="red",
-                font=font,
-            )
-            text_w, text_h = draw.textsize(
-                f"Alexa Music One Of The Most Advanced Telegram Music Bot", font=arial
-            )
-            draw.text(
-                ((1280 - text_w) / 2, 80),
-                f"Alexa Music One Of The Most Advanced Telegram Music Bot",
-                fill="green",
-                font=arial,
-            )
-            if para[0]:
-                text_w, text_h = draw.textsize(f"{para[0]}", font=font)
-                draw.text(
-                    ((1280 - text_w) / 2, 550),
-                    f"{para[0]}",
-                    fill="yellow",
-                    stroke_width=1,
-                    stroke_fill="black",
-                    font=font,
-                )
-            if para[1]:
-                text_w, text_h = draw.textsize(f"{para[1]}", font=font)
-                draw.text(
-                    ((1280 - text_w) / 2, 600),
-                    f"{para[1]}",
-                    fill="white",
-                    stroke_width=1,
-                    stroke_fill="black",
-                    font=font,
-                )
-        except:
-            pass
-        text_w, text_h = draw.textsize(f"YouTube: Jankari Ki Duniya", font=arial)
-        draw.text(
-            ((1280 - text_w) / 2, 620),
-            f"YouTube: Jankari Ki Duniya",
-            fill="white",
-            font=arial,
-        )
-        text_w, text_h = draw.textsize(f"Duration: {duration} Mins", font=arial)
-        draw.text(
-            ((1280 - text_w) / 2, 660),
-            f"Duration: {duration} Mins",
-            fill="black",
-            font=arial,
-        )
-
         try:
             os.remove(f"cache/thumb{videoid}.png")
         except:
