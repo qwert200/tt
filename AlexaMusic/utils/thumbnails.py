@@ -142,7 +142,7 @@ async def gen_thumb(videoid, user_id, theme):
             
 
 
-async def gen_qthumb(videoid, user_id, theme):
+async def gen_thumb(videoid, user_id, theme):
     if os.path.isfile(f"cache/que{videoid}_{user_id}.png"):
         return f"cache/que{videoid}_{user_id}.png"
     url = f"https://www.youtube.com/watch?v={videoid}"
